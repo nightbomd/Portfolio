@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+  font-family: "dm-sans", sans-serif;
+  font-style: normal;
+}
+
+.background-img {
+  background-image: url(https://codehs.com/uploads/6868e9b1d66f0ec5990082a6e71ed05f);
+}
+
+body {
+  background-color: #F8F9FA;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: rgb(227, 218, 232);
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+  background-color: #6C5CE7;
+}
+a:hover::after {
+  transform: scaleX(1);
+}
+
+nav {
+  background-color: #2D3436;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  transition: 0.15s;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+nav ul li {
+  display: inline-block;
+  gap: 20px;
+}
+nav span {
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+}
+
+header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding: 10px;
+  gap: 5%;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+header .header-wrapper {
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 60px;
+}
+header h1 span {
+  background: linear-gradient(to right, #06866c, #6C5CE7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+header p {
+  color: rgb(101, 101, 101);
+  font-size: 26px;
+}
+header img {
+  border: 4px solid #6C5CE7;
+  height: 250px;
+  width: auto;
+  border-radius: 125px;
+}
+
+main {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 90%;
+  margin: 0 auto;
+}
+main section {
+  padding: 2.5%;
+  margin: 4% auto;
+}
+main section .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+main section .wrapper .card {
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 275px;
+  padding: 10px;
+  background-color: #2D3436;
+  color: white;
+  box-shadow: 0px 8px 32px rgb(0, 0, 0);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-left: 10px solid #06866c;
+  border-radius: 16px;
+}
+main section .wrapper .card img {
+  display: block;
+  width: auto;
+  height: 50px;
+}
+main section .wrapper .card .card-img-top {
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+}
+main section .wrapper .card h3 {
+  text-align: center;
+}
+main section .wrapper .card img {
+  height: 50px;
+  width: auto;
+  margin: 20px auto;
+  display: block;
+}
+main section .wrapper .card button {
+  border: none;
+  padding: 8px 16px;
+  background-color: #6C5CE7;
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(255, 255, 255, 0.162);
+  transition: 0.3s ease-in-out;
+  color: white;
+  height: 50px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: 100px;
+  margin: 5px;
+}
+main section .wrapper .card button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+main #projects .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+main #projects .card {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#skills .card {
+  opacity: 0;
+}
+
+form {
+  border-radius: 16px;
+  background-color: #2D3436;
+  border-left: 10px solid #06866c;
+  padding: 10px;
+  box-shadow: 0px 8px 32px rgb(0, 0, 0);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: rgb(231, 231, 231);
+  padding: 40px;
+  gap: 20px;
+  margin: 0 auto;
+}
+form input {
+  height: 45px;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+form textarea {
+  min-height: 120px;
+  padding: 16px;
+  resize: vertical;
+}
+form input,
+form textarea {
+  border-radius: 8px;
+  background-color: rgba(222, 222, 222, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.2s ease;
+}
+form input::-moz-placeholder, form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #6C5CE7;
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.3);
+}
+form button {
+  border: none;
+  padding: 8px 16px;
+  background-color: #6C5CE7;
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(255, 255, 255, 0.162);
+  transition: 0.3s ease-in-out;
+  color: white;
+  margin-top: 20px;
+  transition: all 0.2s ease;
+}
+form button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+footer {
+  background-color: #2D3436;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 10px 10px;
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  #skills .wrapper {
+    grid-template-columns: 85%;
+  }
+  #skills .wrapper p {
+    width: 75%;
+    margin: 0 auto;
+  }
+  form {
+    width: 80%;
+  }
+  #projects .wrapper {
+    grid-template-columns: 85% !important;
+    justify-content: center !important;
+  }
+  #projects .wrapper .card-img-top {
+    height: 380px;
+  }
+  main section .wrapper {
+    grid-template-columns: 1fr;
+  }
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  header img {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1000px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 15px;
+  }
+}/*# sourceMappingURL=styles.css.map */
